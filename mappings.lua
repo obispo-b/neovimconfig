@@ -20,9 +20,8 @@ M.general = {
         vim.lsp.buf.format()
         vim.cmd "wqa"
       end,
-      "Save and quit",
+      "Quit without saving",
     },
-    -- ["<leader>q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     ["<leader>w"] = {
       function()
         vim.lsp.buf.format()
@@ -30,31 +29,8 @@ M.general = {
       end,
       "Save",
     },
-    ["K"] = {
-      function()
-        vim.lsp.buf.hover()
-      end,
-      "LSP hover",
-    },
-    -- -- cycle through buffers
-    -- ["]b"] = {
-    --   function()
-    --     require("nvchad_ui.tabufline").tabuflineNext()
-    --   end,
-    --   "Goto next buffer",
-    -- },
-    --
-    -- ["[b"] = {
-    --   function()
-    --     require("nvchad_ui.tabufline").tabuflinePrev()
-    --   end,
-    --   "Goto prev buffer",
-    -- },
     ["<leader>ls"] = { "<cmd>Telescope lsp_document_symbols<CR>", desc = "Search document symbols" },
     ["<leader>ld"] = { "<cmd>Telescope diagnostics<CR>", desc = "Show document diagnostics" },
-    -- map("n", m.workspace_symbols, ":Telescope lsp_dynamic_workspace_symbols <CR>"),
-    -- map("n", m.buf_diagnostics, ":Telescope diagnostics bufnr=0 <CR>"),
-    -- map("n", m.workspace_diagnostics, ":Telescope diagnostics <CR>"),
   },
 }
 
@@ -84,6 +60,12 @@ M.tabufline = {
       end,
       "Close buffer",
     },
+  },
+}
+
+M.disabled = {
+  n = {
+    ["<Tab"] = "",
   },
 }
 
