@@ -18,7 +18,7 @@ M.general = {
     ["<leader>q"] = {
       function()
         vim.lsp.buf.format()
-        vim.cmd "wqa"
+        vim.cmd "qa!"
       end,
       "Quit without saving",
     },
