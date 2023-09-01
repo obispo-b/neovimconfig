@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -39,34 +39,34 @@ local plugins = {
   },
 
   -- Install a plugin
-  {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("better_escape").setup()
+  --   end,
+  -- },
 
   {
-    'sainnhe/gruvbox-material',
+    "sainnhe/gruvbox-material",
     config = function()
-      vim.g.gruvbox_material_foreground = 'mix' -- original, mix, material
-      vim.g.gruvbox_material_background = 'medium' -- soft, medium, hard
+      vim.g.gruvbox_material_foreground = "mix" -- original, mix, material
+      vim.g.gruvbox_material_background = "medium" -- soft, medium, hard
     end,
-    event = 'BufEnter',
-    lazy = false
+    event = "BufEnter",
+    lazy = false,
   },
   {
-    'ThePrimeagen/vim-be-good',
-    event = 'BufEnter',
+    "ThePrimeagen/vim-be-good",
+    event = "BufEnter",
   },
   {
-    'christoomey/vim-tmux-navigator',
-    event = 'BufEnter',
+    "christoomey/vim-tmux-navigator",
+    event = "BufEnter",
   },
   {
-    'Mofiqul/vscode.nvim',
-    event = 'BufEnter',
+    "github/copilot.vim",
+    event = "BufEnter",
   },
   -- To make a plugin not be loaded
   -- {
