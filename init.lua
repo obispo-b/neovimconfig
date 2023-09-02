@@ -7,3 +7,4 @@
 -- })
 vim.wo.relativenumber = true
 vim.wo.number = true
+vim.g.copilot_assume_mapped = true
