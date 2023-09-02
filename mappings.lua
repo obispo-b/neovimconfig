@@ -65,7 +65,7 @@ M.tabufline = {
 
 M.disabled = {
   n = {
-    ["<Tab"] = "",
+    ["<Tab>"] = "",
   },
 }
 
