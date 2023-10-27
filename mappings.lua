@@ -21,6 +21,12 @@ M.general = {
       end,
       "Quit without saving",
     },
+    ["<leader>fd"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    },
     ["<leader>w"] = {
       function()
         vim.lsp.buf.format()
