@@ -39,6 +39,10 @@ M.mason = {
     "clang-format",
   },
 }
+-- prettier single quote 
+M.prettier = {
+  singleQuote = true,
+}
 
 -- git support in nvimtree
 M.nvimtree = {
