@@ -40,24 +40,23 @@ local plugins = {
 
   -- Plugins
   {
-    'nvim-lua/plenary.nvim',
+    "nvim-lua/plenary.nvim",
     event = "BufEnter",
   },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && npm install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
     ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
   {
-    'folke/zen-mode.nvim',
+    "folke/zen-mode.nvim",
     event = "BufEnter",
   },
   {
-    'ThePrimeagen/harpoon',
+    "ThePrimeagen/harpoon",
     event = "BufEnter",
   },
   {
