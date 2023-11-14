@@ -3,17 +3,17 @@ local M = {}
 
 M.general = {
   n = {
-    -- ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-    -- ["<leader>o"] = {
-    --   function()
-    --     if vim.bo.filetype == "NvimTree" then
-    --       vim.api.nvim_input "<C-w>l"
-    --     else
-    --       vim.cmd "NvimTreeFocus"
-    --     end
-    --   end,
-    --   desc = "Toggle Explorer Focus",
-    -- },
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>o"] = {
+      function()
+        if vim.bo.filetype == "NvimTree" then
+          vim.api.nvim_input "<C-w>l"
+        else
+          vim.cmd "NvimTreeFocus"
+        end
+      end,
+      desc = "Toggle Explorer Focus",
+    },
     ["<leader>q"] = {
       function()
         vim.cmd "qa!"
