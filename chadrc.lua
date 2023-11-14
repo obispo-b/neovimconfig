@@ -8,7 +8,17 @@ M.ui = {
   theme = "onedark",
   theme_toggle = { "onedark", "one_light" },
 
-  hl_override = highlights.override,
+  hl_override = {
+    highlights.override,
+    NvDashAscii = {
+      bg = "none",
+      fg = "white",
+    },
+    NvDashButtons = {
+      bg = "none",
+      fg = "white",
+    },
+  },
   hl_add = highlights.add,
   statusline = {
     theme = "vscode",

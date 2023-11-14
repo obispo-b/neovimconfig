@@ -32,7 +32,11 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
   },
-
+  {
+    "mrcjkb/haskell-tools.nvim",
+    version = "^3", -- Recommended
+    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+  },
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
