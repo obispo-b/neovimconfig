@@ -38,23 +38,27 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
-  -- {
-  --   "max397574/better-escape.nvim",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("better_escape").setup()
-  --   end,
-  -- },
-
+  -- Plugins
   {
-    "sainnhe/gruvbox-material",
-    config = function()
-      vim.g.gruvbox_material_foreground = "mix" -- original, mix, material
-      vim.g.gruvbox_material_background = "medium" -- soft, medium, hard
-    end,
+    'nvim-lua/plenary.nvim',
     event = "BufEnter",
-    lazy = false,
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && npm install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  {
+    'folke/zen-mode.nvim',
+    event = "BufEnter",
+  },
+  {
+    'ThePrimeagen/harpoon',
+    event = "BufEnter",
   },
   {
     "ThePrimeagen/vim-be-good",
@@ -70,8 +74,11 @@ local plugins = {
     event = "BufEnter",
   },
   {
-    "smithbm2316/centerpad.nvim",
+    "windwp/nvim-ts-autotag",
     event = "BufEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "kylechui/nvim-surround",
@@ -83,19 +90,6 @@ local plugins = {
       }
     end,
   },
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
-  -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
 }
 
 return plugins
