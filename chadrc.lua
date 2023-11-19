@@ -21,7 +21,7 @@ M.ui = {
   },
   hl_add = highlights.add,
   statusline = {
-    theme = "default",
+    theme = "vscode",
     separator_style = "default",
   },
   nvdash = {
